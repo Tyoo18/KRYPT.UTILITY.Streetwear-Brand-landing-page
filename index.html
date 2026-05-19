@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KRYPT.UTILITY // DROP 01</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@700;800&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              pitch: "#080808",
+              charcoal: "#121212",
+              cement: "#A3A3A3",
+              studioWhite: "#F5F5F7",
+              volt: "#DFFF00",
+            },
+            fontFamily: {
+              syne: ["Syne", "sans-serif"],
+              space: ["Space Grotesk", "sans-serif"],
+              inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-pitch text-studioWhite font-inter overflow-x-hidden selection:bg-volt selection:text-pitch"
+  >
+    <!-- Custom Cursor -->
+    <div id="custom-cursor" class="custom-cursor hidden md:block"></div>
+
+    <!-- Live Scarcity Ticker / Announcement Bar -->
+    <div
+      class="w-full bg-volt text-pitch py-1.5 overflow-hidden border-b border-neutral-800 font-space text-xs font-semibold uppercase tracking-widest z-50 relative"
+    >
+      <div class="flex whitespace-nowrap animate-marquee">
+        <span class="mx-4">[SYSTEM STATUS: ACTIVE]</span>
+        <span class="mx-4">KRYPT_DROP_01 CODES DISTRIBUTED</span>
+        <span class="mx-4">STOCK THRESHOLD CRITICAL [SIZE M/L ONLY]</span>
+        <span class="mx-4">HEAVYWEIGHT 450GSM COTTON SPECIFICATION</span>
+        <!-- Duplicate for infinite seamless scroll -->
+        <span class="mx-4">[SYSTEM STATUS: ACTIVE]</span>
+        <span class="mx-4">KRYPT_DROP_01 CODES DISTRIBUTED</span>
+        <span class="mx-4">STOCK THRESHOLD CRITICAL [SIZE M/L ONLY]</span>
+        <span class="mx-4">HEAVYWEIGHT 450GSM COTTON SPECIFICATION</span>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav
+      class="border-b border-neutral-800 px-6 py-4 flex justify-between items-center bg-pitch/90 backdrop-blur-md sticky top-0 z-40"
+    >
+      <div
+        class="font-syne font-extrabold text-xl tracking-tighter hover-trigger"
+      >
+        KRYPT<span class="text-volt">.UTILITY</span>
+      </div>
+      <div class="hidden md:flex space-x-8 font-space text-xs tracking-wider">
+        <a
+          href="#manifesto"
+          class="hover:text-volt transition-colors hover-trigger"
+          >01_THE_PHILOSOPHY</a
+        >
+        <a href="#drop" class="hover:text-volt transition-colors hover-trigger"
+          >02_THE_DROP</a
+        >
+        <a
+          href="#community"
+          class="hover:text-volt transition-colors hover-trigger"
+          >03_COMMUNITY</a
+        >
+        <a
+          href="#syndicate"
+          class="hover:text-volt transition-colors hover-trigger"
+          >04_THE_SYNDICATE</a
+        >
+      </div>
+      <a
+        href="#drop"
+        class="bg-transparent border border-volt text-volt hover:bg-volt hover:text-pitch transition-all duration-300 font-space text-xs px-4 py-2 tracking-wider hover-trigger"
+      >
+        ACCESS TERMINAL
+      </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header
+      class="min-h-[calc(100vh-60px)] grid grid-cols-1 lg:grid-cols-12 relative border-b border-neutral-800"
+    >
+      <!-- Technical Details Column (Left) -->
+      <div
+        class="lg:col-span-5 p-6 md:p-12 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-neutral-800 relative z-10"
+      >
+        <div>
+          <div class="flex items-center space-x-3 mb-6">
+            <span class="w-2.5 h-2.5 bg-volt inline-block animate-pulse"></span>
+            <span
+              class="font-space text-xs tracking-widest text-cement uppercase"
+              >SYS_INITIALIZED_01_ACTIVE</span
+            >
+          </div>
+          <h1
+            class="font-syne font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tighter leading-none mb-6"
+          >
+            HEAVYWEIGHT UTILITY FOR THE UNGOVERNED.
+          </h1>
+          <p
+            class="text-cement text-sm md:text-base max-w-md font-light leading-relaxed mb-8"
+          >
+            Built for the urban landscape. Rigid structured cotton, ergonomic
+            utility pocket grids, and a zero-compromise architectural
+            silhouette.
+          </p>
+        </div>
+
+        <!-- Terminal Info & CTA -->
+        <div>
+          <!-- Simulated Terminal Metrics -->
+          <div
+            class="font-space text-xs border border-neutral-800 p-4 mb-6 space-y-1.5 bg-charcoal/50 text-cement"
+          >
+            <div class="flex justify-between">
+              <span class="text-neutral-500">PROJECT:</span>
+              <span>KRYPT_DROP_01</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-neutral-500">FABRICATION:</span>
+              <span>450GSM TIGHT-LOOP COTTON</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-neutral-500">ORIGIN:</span>
+              <span>TOKYO DESIGN LAB EST_2026</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-neutral-500">COUNTDOWN TO PURGE:</span>
+              <span class="text-volt" id="countdown">04:12:44:09</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="#drop"
+              class="flex-1 bg-volt text-pitch hover:bg-white hover:text-pitch transition-all duration-300 font-space text-sm py-4 px-6 font-bold tracking-widest uppercase text-center hover-trigger"
+            >
+              SECURE ARTIFACT
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Graphic (Right) -->
+      <div
+        class="lg:col-span-7 bg-charcoal/30 flex items-center justify-center relative overflow-hidden group"
+      >
+        <!-- Brutalist Grid Lines Overlay -->
+        <div class="absolute inset-0 grid-line-x opacity-25"></div>
+        <div class="absolute inset-0 grid-line-y opacity-25"></div>
+
+        <!-- Graphic Image Wrapper -->
+        <div
+          class="relative w-full h-full min-h-[400px] flex items-center justify-center p-8 z-10"
+        >
+          <!-- Large brutalist text background -->
+          <div
+            class="absolute font-syne font-black text-neutral-900 text-[10vw] select-none tracking-tighter leading-none"
+          >
+            KRYPT.SYS
+          </div>
+          <!-- Editorial Image Placeholder -->
+          <div
+            class="relative max-w-md w-full aspect-[3/4] bg-neutral-900 border border-neutral-800 p-2 overflow-hidden hover-trigger"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-pitch via-transparent to-transparent opacity-80 z-10"
+            ></div>
+            <div
+              class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-115 grayscale filter contrast-125"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1711888386245-9ca3477a5977?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG1hbGUlMjBwb3NlfGVufDB8fDB8fHwy&quot;);
+              "
+            ></div>
+            <!-- Blueprint/Utility Line details on top -->
+            <div
+              class="absolute top-4 left-4 font-space text-[10px] text-volt tracking-widest uppercase bg-pitch/80 px-2 py-1 z-20"
+            >
+              MODEL // CR_04 // MALE
+            </div>
+            <div
+              class="absolute bottom-4 left-4 font-space text-[10px] text-cement tracking-widest uppercase z-20"
+            >
+              SYSTEM ACCESS SECURE // VERIFIED
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Manifesto / Philosophy -->
+    <section
+      id="manifesto"
+      class="py-24 px-6 md:px-12 border-b border-neutral-800 bg-charcoal/20 relative overflow-hidden"
+    >
+      <div class="max-w-6xl mx-auto">
+        <span class="font-space text-xs text-volt tracking-widest block mb-8"
+          >01 / BRAND MANIFESTO //</span
+        >
+
+        <p
+          class="font-syne font-bold text-3xl md:text-5xl lg:text-6xl tracking-tight leading-tight text-neutral-600 hover-trigger"
+        >
+          WE DO NOT DESIGN
+          <span
+            class="text-studioWhite transition-all duration-300 hover:text-volt"
+            >GARMENTS</span
+          >. WE ARCHITECT SECURE
+          <span
+            class="text-studioWhite transition-all duration-300 hover:text-volt"
+            >SHELLS</span
+          >
+          FOR THE CONCRETE WILDERNESS. EVERY WORKABLE STITCH IS A MEASURE OF
+          UTILITY.
+          <span class="text-volt font-black italic"
+            >LIMITS DO NOT SECURE RECOGNITION.</span
+          >
+        </p>
+
+        <div class="mt-12 flex justify-end">
+          <span
+            class="font-space text-xs text-neutral-500 tracking-widest text-right"
+            >[LAT_35.6762° N // LNG_139.6503° E]</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- The Drop / Product Grid -->
+    <section id="drop" class="border-b border-neutral-800">
+      <!-- Section Header -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 border-b border-neutral-800">
+        <div class="lg:col-span-5 p-6 md:p-12 flex flex-col justify-between">
+          <div>
+            <span
+              class="font-space text-xs text-volt tracking-widest block mb-4"
+              >02 / PRODUCT ALLOCATION</span
+            >
+            <h2
+              class="font-syne font-black text-3xl md:text-4xl uppercase tracking-tighter"
+            >
+              DROP_01 // THE SHELL LAB
+            </h2>
+          </div>
+          <p class="text-cement text-sm max-w-sm mt-4 lg:mt-0 font-light">
+            Extremely limited quantities. Once a blueprint stock depleted log
+            reaches 100%, the dynamic smart contract burns further production.
+          </p>
+        </div>
+        <div
+          class="lg:col-span-7 border-t lg:border-t-0 lg:border-l border-neutral-800 p-6 flex items-center justify-end"
+        >
+          <div class="flex items-center space-x-4 font-space text-xs">
+            <span class="text-neutral-500">SORT BY:</span>
+            <button class="text-volt underline underline-offset-4 uppercase">
+              CATALOG_LIST
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Grid Component -->
+      <div class="grid grid-cols-1 md:grid-cols-3">
+        <!-- Product Item 1 -->
+        <div
+          class="border-b md:border-b-0 md:border-r border-neutral-800 p-6 flex flex-col justify-between group hover-trigger"
+        >
+          <div
+            class="relative w-full aspect-[4/5] bg-neutral-900 border border-neutral-800 overflow-hidden mb-6"
+          >
+            <!-- Image Normal state -->
+            <div
+              class="absolute inset-0 bg-cover bg-center transition-all duration-500 group-hover:scale-105 group-hover:opacity-20 grayscale contrast-125"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1516705346105-1604914311cc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGFya2F8ZW58MHx8MHx8fDI%3D&quot;);
+              "
+            ></div>
+            <!-- Technical Schematic Lineart (Visible on hover as XRAY effect) -->
+            <div
+              class="absolute inset-0 flex items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-neutral-950/90 z-20"
+            >
+              <pre
+                class="font-mono text-[8px] md:text-[10px] lg:text-xs xl:text-xl text-volt leading-none opacity-80 pointer-events-none"
+              >
+  ____________________________________
+ /                                    \
+ |       KRYPT TECHNICAL APPAREL      |  
+ |  ITEM ID: OVER_PARKA_01            |
+ |  FABRIC: 3-PLY HARD-SHELL NYLON    |
+ |  WATERPROOF RATING: 20,000MM       |
+ |  STITCH_COUNT: 14_STITCHES_INCH    |
+ |  FEATURES: EXOSKELETON HOOD SYSTEM |
+ |            WATERPROOF SEAM TAPE    |
+ \____________________________________/
+        \  /  \  /  \  /  \  /
+                        </pre
+              >
+            </div>
+            <!-- Badges -->
+            <div
+              class="absolute top-4 left-4 font-space text-[10px] text-pitch bg-volt font-bold tracking-widest uppercase px-2 py-0.5 z-30"
+            >
+              LIMITED DROP_01
+            </div>
+            <div
+              class="absolute bottom-4 left-4 font-space text-[10px] text-cement bg-pitch/80 tracking-widest uppercase px-2 py-1 z-30"
+            >
+              SYS_CODE_01_PARKA
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3
+                class="font-syne font-bold text-lg md:text-xl uppercase tracking-tighter"
+              >
+                01 // KRYPT OVERSIZED PARKA
+              </h3>
+              <span class="font-space text-volt text-sm font-semibold"
+                >$320.00</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-center text-xs text-cement mb-4"
+            >
+              <span>COLOR: CARBON BLACK</span>
+              <span class="text-neutral-500 font-mono">STOCK: 12 LEFT</span>
+            </div>
+            <button
+              class="w-full bg-neutral-900 hover:bg-volt hover:text-pitch border border-neutral-800 hover:border-volt text-studioWhite transition-all duration-300 py-3 font-space text-xs font-semibold tracking-wider uppercase"
+            >
+              ADD TO SYSTEM CARGO
+            </button>
+          </div>
+        </div>
+
+        <!-- Product Item 2 -->
+        <div
+          class="border-b md:border-b-0 md:border-r border-neutral-800 p-6 flex flex-col justify-between group hover-trigger"
+        >
+          <div
+            class="relative w-full aspect-[4/5] bg-neutral-900 border border-neutral-800 overflow-hidden mb-6"
+          >
+            <div
+              class="absolute inset-0 bg-cover bg-center transition-all duration-500 group-hover:scale-105 group-hover:opacity-20 grayscale contrast-125"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=600&auto=format&fit=crop&quot;);
+              "
+            ></div>
+            <div
+              class="absolute inset-0 flex items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-neutral-950/90 z-20"
+            >
+              <pre
+                class="font-mono text-[8px] md:text-[10px] lg:text-xs xl:text-xl text-volt leading-none opacity-80 pointer-events-none"
+              >
+  ____________________________________
+ /                                    \
+ |       KRYPT TECHNICAL APPAREL      |  
+ |  ITEM ID: CARGO_PANT_02            |
+ |  FABRIC: DOUBLE-WEAVE TEAR-RESIST  |
+ |  WATERPROOF RATING: 20,000MM       |
+ |  FEATURES: 8-POCKET CONFIGURATION  |
+ |            FIDLOCK STRAP SYSTEMS   |
+ |            REINFORCED KNEE PANELS  |
+ \____________________________________/
+         \  /  \  /  \  /  \  /
+            </pre
+              >
+            </div>
+            <div
+              class="absolute top-4 left-4 font-space text-[10px] text-pitch bg-volt font-bold tracking-widest uppercase px-2 py-0.5 z-30"
+            >
+              LIMITED DROP_01
+            </div>
+            <div
+              class="absolute bottom-4 left-4 font-space text-[10px] text-cement bg-pitch/80 tracking-widest uppercase px-2 py-1 z-30"
+            >
+              SYS_CODE_02_CARGO
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3
+                class="font-syne font-bold text-lg md:text-xl uppercase tracking-tighter"
+              >
+                02 // M-51 UTILITY CARGO
+              </h3>
+              <span class="font-space text-volt text-sm font-semibold"
+                >$245.00</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-center text-xs text-cement mb-4"
+            >
+              <span>COLOR: INDUSTRIAL OLIVE</span>
+              <span class="text-neutral-500 font-mono">STOCK: 8 LEFT</span>
+            </div>
+            <button
+              class="w-full bg-neutral-900 hover:bg-volt hover:text-pitch border border-neutral-800 hover:border-volt text-studioWhite transition-all duration-300 py-3 font-space text-xs font-semibold tracking-wider uppercase"
+            >
+              ADD TO SYSTEM CARGO
+            </button>
+          </div>
+        </div>
+
+        <!-- Product Item 3 -->
+        <div class="p-6 flex flex-col justify-between group hover-trigger">
+          <div
+            class="relative w-full aspect-[4/5] bg-neutral-900 border border-neutral-800 overflow-hidden mb-6"
+          >
+            <div
+              class="absolute inset-0 bg-cover bg-center transition-all duration-500 group-hover:scale-105 group-hover:opacity-20 grayscale contrast-125"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1556821840-3a63f95609a7?q=80&w=600&auto=format&fit=crop&quot;);
+              "
+            ></div>
+            <div
+              class="absolute inset-0 flex items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-neutral-950/90 z-20"
+            >
+              <pre
+                class="font-mono text-[8px] md:text-[10px] lg:text-xs xl:text-xl text-volt leading-none opacity-80 pointer-events-none"
+              >
+  _____________________________________
+ /                                     \
+ |       KRYPT TECHNICAL APPAREL       |  
+ |  ITEM ID: CABLE_HOOD_03             |
+ |  FABRIC: 450GSM COMPRESSED COTTON   |
+ |  WATERPROOF RATING: 20,000MM        |
+ |  FEATURES: CROPPED DROPPED SHOULDER |
+ |            ASYMMETRIC REVERSE SEAM  |
+ |            THERMAL REGULATION KNIT  |
+ \_____________________________________/
+         \  /  \  /  \  /  \  /
+            </pre
+              >
+            </div>
+            <div
+              class="absolute top-4 left-4 font-space text-[10px] text-pitch bg-volt font-bold tracking-widest uppercase px-2 py-0.5 z-30"
+            >
+              LIMITED DROP_01
+            </div>
+            <div
+              class="absolute bottom-4 left-4 font-space text-[10px] text-cement bg-pitch/80 tracking-widest uppercase px-2 py-1 z-30"
+            >
+              SYS_CODE_03_HOOD
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3
+                class="font-syne font-bold text-lg md:text-xl uppercase tracking-tighter"
+              >
+                03 // 450GSM CABLE HOODIE
+              </h3>
+              <span class="font-space text-volt text-sm font-semibold"
+                >$180.00</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-center text-xs text-cement mb-4"
+            >
+              <span>COLOR: OFF-WHITE RAW</span>
+              <span class="text-neutral-500 font-mono">STOCK: 3 LEFT</span>
+            </div>
+            <button
+              class="w-full bg-neutral-900 hover:bg-volt hover:text-pitch border border-neutral-800 hover:border-volt text-studioWhite transition-all duration-300 py-3 font-space text-xs font-semibold tracking-wider uppercase"
+            >
+              ADD TO SYSTEM CARGO
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof / Scarcity Hub -->
+    <section
+      id="community"
+      class="grid grid-cols-1 lg:grid-cols-12 border-b border-neutral-800"
+    >
+      <!-- Live System Logs -->
+      <div
+        class="lg:col-span-4 p-6 md:p-12 border-b lg:border-b-0 lg:border-r border-neutral-800 flex flex-col justify-between"
+      >
+        <div>
+          <span class="font-space text-xs text-volt tracking-widest block mb-4"
+            >03 / ACTIVE SYSTEM LOGS</span
+          >
+          <h3
+            class="font-syne font-black text-2xl md:text-3xl uppercase tracking-tighter mb-6"
+          >
+            GLOBAL_LOG
+          </h3>
+        </div>
+
+        <div
+          id="ticker-log"
+          class="font-mono text-xs text-neutral-500 space-y-4 max-h-[250px] overflow-hidden"
+        >
+          <div>
+            [16:21:05] <span class="text-volt">SYS_VERIFIED:</span> USER_0019
+            SECURED S_HOODIE_03
+          </div>
+          <div>
+            [16:22:11]
+            <span class="text-neutral-400">SYS_PING:</span> ADDR_DE_04 SECURED
+            M_PARKA_01
+          </div>
+          <div>
+            [16:23:44]
+            <span class="text-neutral-400">SYS_PING:</span> ADDR_US_22
+            REQUESTING ACCESS_CODE
+          </div>
+          <div>
+            [16:24:19] <span class="text-volt">SYS_VERIFIED:</span> USER_2991
+            SECURED L_CARGO_02
+          </div>
+        </div>
+      </div>
+
+      <!-- Editorial Community Grid -->
+      <div
+        class="lg:col-span-8 p-6 md:p-12 bg-charcoal/30 flex flex-col justify-between relative overflow-hidden"
+      >
+        <div class="absolute inset-0 grid-line-x opacity-10"></div>
+        <div class="absolute inset-0 grid-line-y opacity-10"></div>
+
+        <span
+          class="font-space text-xs text-cement tracking-widest block mb-8 relative z-10"
+          >STREET SCENARIOS // FIELD ARTIFACTS</span
+        >
+
+        <!-- Polaroids/UGC flex -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 relative z-10">
+          <!-- polaroid 1 -->
+          <div
+            class="bg-charcoal p-2 border border-neutral-800 rotate-[-1deg] hover:rotate-0 transition-transform duration-300 hover-trigger"
+          >
+            <div
+              class="aspect-[1/1] w-full bg-cover bg-center grayscale filter contrast-125"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=400&auto=format&fit=crop&quot;);
+              "
+            ></div>
+            <div
+              class="font-space text-[10px] text-neutral-500 mt-2 text-center"
+            >
+              LOC_092 // CAPTURE_A
+            </div>
+          </div>
+          <!-- polaroid 2 -->
+          <div
+            class="bg-charcoal p-2 border border-neutral-800 rotate-[2deg] hover:rotate-0 transition-transform duration-300 hover-trigger"
+          >
+            <div
+              class="aspect-[1/1] w-full bg-cover bg-center grayscale filter contrast-125"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=400&auto=format&fit=crop&quot;);
+              "
+            ></div>
+            <div
+              class="font-space text-[10px] text-neutral-500 mt-2 text-center"
+            >
+              LOC_214 // CAPTURE_B
+            </div>
+          </div>
+          <!-- polaroid 3 -->
+          <div
+            class="bg-charcoal p-2 border border-neutral-800 rotate-[-3deg] hover:rotate-0 transition-transform duration-300 hover-trigger"
+          >
+            <div
+              class="aspect-[1/1] w-full bg-cover bg-center grayscale filter contrast-125"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=400&auto=format&fit=crop&quot;);
+              "
+            ></div>
+            <div
+              class="font-space text-[10px] text-neutral-500 mt-2 text-center"
+            >
+              LOC_088 // CAPTURE_C
+            </div>
+          </div>
+          <!-- polaroid 4 -->
+          <div
+            class="bg-charcoal p-2 border border-neutral-800 rotate-[1deg] hover:rotate-0 transition-transform duration-300 hover-trigger"
+          >
+            <div
+              class="aspect-[1/1] w-full bg-cover bg-center grayscale filter contrast-125"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=400&auto=format&fit=crop&quot;);
+              "
+            ></div>
+            <div
+              class="font-space text-[10px] text-neutral-500 mt-2 text-center"
+            >
+              LOC_909 // CAPTURE_D
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Underground Club (Newsletter Register) -->
+    <section
+      id="syndicate"
+      class="py-24 px-6 md:px-12 bg-pitch border-b border-neutral-800 text-center relative overflow-hidden"
+    >
+      <div class="absolute inset-0 grid-line-x opacity-10"></div>
+      <div class="absolute inset-0 grid-line-y opacity-10"></div>
+
+      <div class="max-w-2xl mx-auto relative z-10">
+        <span class="font-space text-xs text-volt tracking-widest block mb-4"
+          >04 / JOIN THE NETWORK //</span
+        >
+        <h2
+          class="font-syne font-black text-4xl md:text-5xl uppercase tracking-tighter mb-4"
+        >
+          THE SYNDICATE
+        </h2>
+        <p
+          class="text-cement text-sm md:text-base font-light mb-8 max-w-md mx-auto"
+        >
+          No newsletters. Just algorithmic notification when product schemas are
+          finalized. Subscribers receive active access codes 15 minutes before
+          global deployment.
+        </p>
+
+        <form
+          class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2 justify-center max-w-lg mx-auto"
+          onsubmit="
+            event.preventDefault();
+            alert('AUTHENTICATION IN PROCESS... CHECK SECURE COMMS SOON.');
+          "
+        >
+          <input
+            type="email"
+            placeholder="ENTER EXCLUSIONARY EMAIL..."
+            required
+            class="flex-1 bg-charcoal border border-neutral-800 text-studioWhite placeholder-neutral-600 px-4 py-3.5 focus:border-volt focus:outline-none font-space text-xs rounded-none tracking-widest"
+          />
+          <button
+            type="submit"
+            class="bg-volt text-pitch hover:bg-studioWhite hover:text-pitch px-8 py-3.5 font-space text-xs font-bold tracking-widest uppercase transition-colors duration-300 rounded-none hover-trigger"
+          >
+            INITIALIZE ACCESS
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="p-6 md:p-12 bg-pitch text-neutral-500 text-xs font-space flex flex-col md:flex-row justify-between items-center border-t border-neutral-900"
+    >
+      <div class="mb-4 md:mb-0 text-center md:text-left">
+        <span>© 2026 KRYPT.UTILITY ARCHIVE CORP.</span>
+        <span class="block text-[10px] text-neutral-700 mt-1"
+          >ALL INTELLECTUAL PROPERTY REPLICABLE UNDER ENCRYPTED UTILITY ACT
+          SECTION 01</span
+        >
+      </div>
+      <div class="flex space-x-6">
+        <a href="#" class="hover:text-volt transition-colors">ENCRYPTED_NET</a>
+        <a href="#" class="hover:text-volt transition-colors">BLUEPRINT_FILE</a>
+        <a href="#" class="hover:text-volt transition-colors">SECURITY_KEYS</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+/* Custom Utilities for Brutalist Design */
+.grid-line-x {
+  background-image: linear-gradient(to right, #262626 1px, transparent 1px);
+  background-size: 40px 100%;
+}
+.grid-line-y {
+  background-image: linear-gradient(to bottom, #262626 1px, transparent 1px);
+  background-size: 100px 40px;
+}
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #dfff00;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition:
+    width 0.2s,
+    height 0.2s,
+    background-color 0.2s;
+}
+.cursor-hover {
+  width: 40px;
+  height: 40px;
+  background-color: #dfff00;
+  border-color: #dfff00;
+}
+/* Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+/* Hide scrollbars but keep functionality */
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  scrollbar-width: none;
+  cursor: none; /* Hide default to showcase custom cursor */
+}
