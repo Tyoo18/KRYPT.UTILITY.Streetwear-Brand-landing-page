@@ -50,13 +50,6 @@ Rigid structural borders, raw layout lines (1px border-neutral-800), strict angu
   - Asynchronous, randomized ticker-logs to simulate high-traffic server purchasing signals (User Scarcity trigger)
   - High-precision millisecond-based system countdown loop
 
-### 2. Live Deployment (Vercel / Netlify / GitHub Pages)
-
-This single-file application can be deployed instantly to global CDNs.
-
-- **GitHub Pages:** Set your site's source folder to `/root` in repository settings
-- **Vercel / Netlify:** Import the repository directly and deploy without build steps (zero build configuration required)
-
 ## ⚡ Key Sections (Conversion Mechanics)
 
 ### The Anti-Hero (Terminal Layout)
