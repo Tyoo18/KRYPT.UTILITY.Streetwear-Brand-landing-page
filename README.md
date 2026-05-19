@@ -50,17 +50,6 @@ Rigid structural borders, raw layout lines (1px border-neutral-800), strict angu
   - Asynchronous, randomized ticker-logs to simulate high-traffic server purchasing signals (User Scarcity trigger)
   - High-precision millisecond-based system countdown loop
 
-### 1. Local Development
-
-Clone this repository and open the source file directly in any browser:
-
-```bash
-git clone https://github.com/your-username/krypt-utility.git
-cd krypt-utility
-# Open via browser (e.g. Chrome, Firefox)
-open index.html
-```
-
 ### 2. Live Deployment (Vercel / Netlify / GitHub Pages)
 
 This single-file application can be deployed instantly to global CDNs.
