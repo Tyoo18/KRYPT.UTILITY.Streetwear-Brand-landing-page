@@ -6,7 +6,7 @@
              | ' /| |__) \ \_/ /| |__) | | |  | |  | |  | |    | | | |      | |    | |   \ \_/ / 
              |  < |  _  / \   / |  ___/  | |  | |  | |  | |    | | | |      | |    | |    \   /  
              | . \| | \ \  | |  | |      | |  | |__| |  | |   _| |_| |____ _| |_   | |     | |   
-             |_|\_\_|  \_\ |_|  |_|      |_|   \____/   |_|  |_____|______|_____|  |_|     |_|                                                                          
+             |_|\_\_|  \_\ |_|  |_|      |_|   \____/   |_|  |_____|______|_____|  |_|     |_|                                                                                                                                                      
 ```
 
 **[STATUS: ACTIVE]** // Pre-launch Interactive Architectural Landing Page for KRYPT.UTILITY Drop 01. Engineered for Gen Z & Millennials valuing authenticity, strict industrial aesthetics, and micro-scarcity loops.
