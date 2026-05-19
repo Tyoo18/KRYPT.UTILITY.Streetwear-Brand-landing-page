@@ -1,11 +1,14 @@
 # KRYPT.UTILITY // DROP_01_PROTOTYPE
 
-|  |/  |  __ \ \   / /  __ __   | |  | |   |   | |    |   |   \ \   / /
-| ' /  | |) \ _/ /| |) | | |  | |  | |  | |    | | | |      | |   | |  \ _/ /
-|  <   |  _  / \   / |  /  | |  | |  | |  | |    | | | |      | |   | |   \   /
-| . \  | | \ \  | |  | |      | |  | || |  | |   | || |_ | | | |   | |
-||__||  _\ ||  ||      ||   _/   |_|  ||||__|  ||
-
+ ___  __    ________      ___    ___ ________  _________  ___  ___  _________  ___  ___       ___  _________    ___    ___ 
+|\  \|\  \ |\   __  \    |\  \  /  /|\   __  \|\___   ___\\  \|\  \|\___   ___\\  \|\  \     |\  \|\___   ___\ |\  \  /  /|
+\ \  \/  /|\ \  \|\  \   \ \  \/  / | \  \|\  \|___ \  \_\ \  \\\  \|___ \  \_\ \  \ \  \    \ \  \|___ \  \_| \ \  \/  / /
+ \ \   ___  \ \   _  _\   \ \    / / \ \   ____\   \ \  \ \ \  \\\  \   \ \  \ \ \  \ \  \    \ \  \   \ \  \   \ \    / / 
+  \ \  \\ \  \ \  \\  \|   \/  /  /   \ \  \___|    \ \  \ \ \  \\\  \   \ \  \ \ \  \ \  \____\ \  \   \ \  \   \/  /  /  
+   \ \__\\ \__\ \__\\ _\ __/  / /      \ \__\        \ \__\ \ \_______\   \ \__\ \ \__\ \_______\ \__\   \ \__\__/  / /    
+    \|__| \|__|\|__|\|__|\___/ /        \|__|         \|__|  \|_______|    \|__|  \|__|\|_______|\|__|    \|__|\___/ /     
+                        \|___|/                                                                               \|___|/      
+                                                                                                                           
 **[STATUS: ACTIVE]** // Pre-launch Interactive Architectural Landing Page for KRYPT.UTILITY Drop 01. Engineered for Gen Z & Millennials valuing authenticity, strict industrial aesthetics, and micro-scarcity loops.
 
 ## 👁️ Visual & Design Philosophy
@@ -33,17 +36,6 @@ KRYPT.UTILITY rejects corporate visual clichés. The interface draws inspiration
 
 Rigid structural borders, raw layout lines (1px border-neutral-800), strict angular elements (zero rounded corners), and transparent grid-overlays representing architectural floor plans.
 
-## 🏗️ Technical Architecture & Stack
-
-The prototype represents a high-performance frontend framework designed for extreme speed and instantaneous interaction feedback:
-[Client / Custom Cursor] ---> [HTML5 / Tailwind UI Grid]
-|
-+-----------------------+-----------------------+
-|                       |                       |
-[Micro-Interactions]     [Interactive X-Ray]     [Asynchronous Tickers]
-- Custom Pointer         - Ascii Schematics      - Live Scarcity Logs
-- GSAP-like Hover States - Responsive Text Scale  - Real-time Clock loops
-
 ### Core Technologies
 
 - **Tailwind CSS Utility Framework:** Tailored layout adjustments, custom font pairing configurations, and dynamic responsive break-points
@@ -55,14 +47,6 @@ The prototype represents a high-performance frontend framework designed for extr
   - Smooth dual-axis layout custom cursor trailing system
   - Asynchronous, randomized ticker-logs to simulate high-traffic server purchasing signals (User Scarcity trigger)
   - High-precision millisecond-based system countdown loop
-
-## 📂 Project Structure
-├── index.html       # Single-file immersive landing page (Structure, Style, Logic)
-└── README.md        # Technical Documentation & Configuration guide
-
-## 🚀 Deployment & Installation
-
-Because the prototype is engineered as a fully optimized, self-contained single-file application, running and reviewing the code is friction-free:
 
 ### 1. Local Development
 
